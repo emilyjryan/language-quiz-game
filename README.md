@@ -1,17 +1,20 @@
 # language-quiz-game
 
 Elevator pitch:
+
 "There are over 7,000 languages spoken around the globe. Think you could identify some of them? Test your knowledge of different languages using this fun game! You'll be given phrases from random languages and it's up to you to identify them to earn points. Learn as you go with English translations given for each phrase. Play against yourself to beat your high score!"
 
 About the Game:
+
 This game will involve one phrase at a time popping up on the canvas screen. The player will need to guess between three language options to guess the correct language. If they are correct, they get one point. If not, they do not receive a point. There will be 10 phrases. Score will be number correct out of 10.
 
 Tech stack used:
+
 - Html (Canvas)
 - CSS
 - Javascript
 
-Wireframes:
+Wireframe:
 <!-- local image -->
 ![Wireframe](./images/wireframe1201.png)
 
@@ -36,4 +39,5 @@ Stretch Goals:
 - Include a @media query for mobile devices and smaller screens
 
 Potential roadblocks:
-- 
+- Difficulty linking the language phrase with the correct button
+- If going for challenge, difficulty using fetch to generate random phrases with language key value attached
