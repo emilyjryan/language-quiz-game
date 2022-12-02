@@ -31,14 +31,15 @@ canvas {
     height: 70%;
     width: 70%;
     grid-gap: 5px;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
     grid-template-areas: "top-left top-left top-right"
                          "main main main"
+                         "instructions mid-mid mid-right"
                          "btm-left btm-left btm-right";
 }
 
-#top-left, #top-mid, #top-right, #btm-left, #btm-mid, #btm-right {
+#top-left, #top-right, #instructions, #mid-mid, #mid-right, #btm-left, #btm-right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,24 +54,32 @@ main {
     grid-area: top-left;
 }
 
-#top-mid {
-    grid-area: top-mid;
-}
 
 #top-right {
     grid-area: top-right;
 }
 
-#btm-left {
-    grid-area: btm-left;
+#mid-left {
+    grid-area: mid-left;
 }
 
-#btm-mid {
-    grid-area: btm-mid;
+#mid-mid {
+    grid-area: mid-mid;
 }
+
+#mid-right {
+    grid-area: mid-right;
+}
+
+#btm-left {
+    grid-area: btm-left;
+    display: none;
+}
+
 
 #btm-right {
     grid-area: btm-right;
+    display: none;
 }
 
 button {

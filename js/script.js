@@ -7,18 +7,51 @@ canvas.setAttribute('width', getComputedStyle(canvas)['width'])
 const ctx = canvas.getContext('2d')
 
 
-
 // ====== ELEMENTS NEEDED ====== //
 
 // DEFINE CLASSES
 
-// Game Class
-
-
 // Phrase Class
+
+class Phrase { 
+
+    // constructor:
+    constructor (phrase, language) {
+        this.phrase = phrase
+        this.language = language
+        console.log(this)
+    }
+
+    // methods:
+    render() {
+        ctx.fillStyle = 'hotpink'
+        ctx.fillRect(30, 20, 100, 30)
+        ctx.strokeText(this.phrase, 10, 50)
+    }
+}
+
+french = new Phrase ("C'est la vie", "French")
+spanish = new Phrase ("Mi casa es su casa", "Spanish")
+
+console.log(french)
+console.log(spanish)
+
+french.render()
+
 // render within method
 
+// Game Class
+
+//Variables:
+const instructions = document.querySelector('#instructions')
+
 // DOM CONTENT LOADED
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("main.js loaded")
+
+
+
+})
 
 // INSTRUCTIONS
 
@@ -30,12 +63,15 @@ const ctx = canvas.getContext('2d')
 // PLAY
 
 // starts GAME
-// 
+// Instructions button disappears
+// Input bar appears
+// Play button disappears
+// Submit button appears
 
 // PHRASES
 
 // phrases array with key-value pairs
-// random phrase from the list is generated on screen
-// options appear for user to guess from
-// click events for each option
+// 1st phrase from the list is generated on screen
+// input bar with submit button are rendered
+// click event for submit button
 // 
