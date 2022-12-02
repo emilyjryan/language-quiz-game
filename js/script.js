@@ -16,27 +16,30 @@ const ctx = canvas.getContext('2d')
 class Phrase { 
 
     // constructor:
-    constructor (phrase, language) {
+    constructor (phrase, language, translation) {
         this.phrase = phrase
         this.language = language
+        this.translation = translation
         console.log(this)
     }
 
     // methods:
     render() {
-        ctx.fillStyle = 'hotpink'
-        ctx.fillRect(30, 20, 100, 30)
-        ctx.strokeText(this.phrase, 10, 50)
+        ctx.fillStyle = 'white'
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        ctx.strokeText(this.phrase, 0.4*canvas.width, 0.2*canvas.height, 100)
+
+
     }
 }
 
-french = new Phrase ("C'est la vie", "French")
-spanish = new Phrase ("Mi casa es su casa", "Spanish")
+french = new Phrase ("C'est la vie", "French", "This is the life")
+spanish = new Phrase ("Mi casa es su casa", "Spanish", "My house is your house")
 
 console.log(french)
 console.log(spanish)
 
-french.render()
+// french.render()
 
 // render within method
 
@@ -49,7 +52,15 @@ const instructions = document.querySelector('#instructions')
 document.addEventListener("DOMContentLoaded", function() {
     console.log("main.js loaded")
 
+// Instructions button:
+instructions.addEventListener('click', () => {
+    ctx.fillStyle = 'white'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    ctx.font = "20px Georgia"
+    ctx.strokeText("There are over 7,000 languages spoken around the globe. Think you could identify some of them? Test your knowledge of different languages using this fun game! You'll be given phrases from random languages and it's up to you to identify them to earn points. Learn as you go with English translations given for each phrase. Play against yourself to beat your high score!", 20, 20, canvas.width - 40)
+    // ====== NEED TO FIGURE OUT TEXT WRAP ====== //
 
+})
 
 })
 
