@@ -6,7 +6,7 @@
 
 ## About the Game:
 
-This game will involve one phrase at a time popping up on the canvas screen. The player will need to guess between three language options to guess the correct language. If they are correct, they get one point. If not, they do not receive a point. There will be 10 phrases. Score will be number correct out of 10.
+This game will involve one phrase at a time popping up on the canvas screen. The player will need to type in the correct language to earn one point. If they are incorrect, they do not receive a point. There will be 10 phrases. Score will be number correct out of 10.
 
 ## Tech stack used:
 
@@ -23,15 +23,15 @@ This game will involve one phrase at a time popping up on the canvas screen. The
 - On 'instructions' click, render instruction page with directions in the canvas
 - on 'play' click, render new canvas with 'guess' button
 - Render 1 phrase at a time to appear on the screen, from a fixed list of 10 phrases, with the English translation below
-- Render 3 buttons with 3 different language option choices for user to choose from
-- User clicks correct language that matches phrase --> render 'correct' screen and add 1 point, render 'next' button
+- Render a free type input bar with a submit button for user to type in a language and submit their guess.
+- User types in correct language that matches phrase --> render 'correct' screen and add 1 point, render 'next' button
 - User clicks incorrect language --> render 'unlucky' screen and show current score, render 'next' button
 - Game ends after the 10 phrases have been clicked through
 - End screen rendered with ending score, and two buttons for 'try again' and 'instructions'
 
 
 ## Stretch Goals:
-- Input box for users to free type their language guess
+- Three language options appear with each new phrase for the user to guess from, one is correct and the other two are randomly generated.
 - Add more phrases and incorporate a timer to see how many points a player can get within a specific timeframe
 - Keep track of high scores so player can play against his best score
 - Each phrases will be floating down slowly in the canvas and player must type in language before they reach the bottom edge, or else it counts as a loss.
